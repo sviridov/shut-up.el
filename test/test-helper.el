@@ -26,8 +26,12 @@
 (require 's)
 (require 'f)
 
+(require 'undercover)
+(undercover "shut-up.el")
+
 ;; Load shut-up from the source directory
 (let ((source-directory (locate-dominating-file (f-this-file) "Cask")))
   (load (expand-file-name "shut-up" source-directory)))
+
 
 ;;; test-helper.el ends here
